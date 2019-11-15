@@ -5,16 +5,21 @@ import Game from "./bowling";
 let g;
 beforeEach(() => (g = new Game()));
 
+
 test("gutter game", () => {
-	for (let i=0; i < 20; i += 1)
-		g.roll(0);
+	rollMany(20, 0);
 
 	expect(g.score()).toBe(0);
 } );
 
 test("all ones", () => {
-	for (let i = 0; i<20; i += 1)
-		g.roll(1)
+	rollMany(20, 1);
 
 	expect(g.score()).toBe(20);
 });
+
+function rollMany(rolls, pins) {
+	for(let i=0; i < rolls; i+= 1)
+		g.roll(pins);
+
+}
