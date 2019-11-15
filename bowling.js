@@ -9,7 +9,11 @@ export default class Game{
 	}
 
 	score(){
-		return this._score;
+		let score = 0;
+		for (let i = 0; i < this._rolls.lenght; i++) {
+			score += this._rolls[i];
+		}
+		return score;
 	}
 
 }
