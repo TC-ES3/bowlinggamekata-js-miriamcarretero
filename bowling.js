@@ -10,7 +10,7 @@ export default class Game{
 
 	score(){
 		let score = 0;
-		for (let i = 0; i < this._rolls.lenght; i++) {
+		for (let i = 0; i < this._rolls.length; i++) {
 			score += this._rolls[i];
 		}
 		return score;
