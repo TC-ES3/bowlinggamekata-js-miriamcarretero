@@ -1,6 +1,8 @@
 //bowling.js
 export default class Game{
 	roll(){}
-	score(){}
+	score(){
+		return 0;
+	}
 
 }
